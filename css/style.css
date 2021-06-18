@@ -85,6 +85,10 @@ legend {
     margin-bottom: 10px;
 }
 
+.label-input-pair {
+    display: block;
+}
+
 label {
     display: block; 
     margin-top: 25px;
@@ -110,6 +114,10 @@ input[type="text"], input[type="email"], textarea, select {
     color: #2d3945;
     background: #eff0f1;
     transition: background-color 0.5s ease;
+}
+
+input[id="zip"] {
+    width: 50%;
 }
 
 select, select:focus {
@@ -142,12 +150,6 @@ input:focus, textarea:focus, select:focus, button:focus {
 ::-ms-input-placeholder { /* Microsoft Edge */
     color: #ccc;
   }
-  
-.hint {
-    color: #666;
-    font-size: .6em;
-    margin-top: 10px;;
-}
 
 textarea {
     height: 200px;
@@ -179,26 +181,30 @@ button:hover {
 
 @media (min-width: 768px) {
 
-    #contact-info-form {
+    .label-input-pair {
         display: flex;
         flex: 100%;
         flex-wrap: wrap;
+        justify-content: left;
     }
 
     #contact-info-form legend {
         margin-bottom: 30px;
     }
 
-    #contact-info-form label {
+    .label-input-pair label {
         flex: 25%;
+        max-width: 25%;
     }
 
-    #contact-info-form input,
-    #contact-info-form select {
+    .label-input-pair input,
+    .label-input-pair select {
         flex: 75%;
     }
 
-    .hint {
-        display: block;
+    .label-input-pair.zip-code input {
+        flex: 25%;  
+        max-width: 25%;  
+        justify-items: left;
     }
 }
